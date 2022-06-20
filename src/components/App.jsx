@@ -58,6 +58,14 @@ class App extends Component{
     );
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate');
+
+    if (this.state.contacts !== prevState.contacts) {
+      console.log('Local');
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
   
 
   render() {
