@@ -1,0 +1,22 @@
+.deleteBtn {
+  margin-left: 15px;
+
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+
+  margin-top: 20px;
+  /* display: block; */
+
+  max-width: 100px;
+  padding: 5px 4px;
+
+  font-size: 13px;
+
+  border-radius: 4px;
+}
+
+.deleteBtn:hover {
+  background-color: #c8e4fc;
+}
