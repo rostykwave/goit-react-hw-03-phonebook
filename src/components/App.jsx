@@ -58,8 +58,21 @@ class App extends Component{
     );
   };
 
+  componentDidMount() {
+    console.log('DidMount');
+
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
+
+    if (parsedContacts) {
+      this.setState({contacts:parsedContacts})
+    }
+    
+    
+  }
+
   componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate');
+    console.log('DidUpdate');
 
     if (this.state.contacts !== prevState.contacts) {
       console.log('Local');
